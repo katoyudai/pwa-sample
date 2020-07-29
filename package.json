@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "release": "yarn build && git add -u docs/* && git commit -m \"release\" && git push"
+    "release": "yarn run build && git add -u docs/* && git commit -m \"release\" && git push"
   },
   "dependencies": {
     "core-js": "^3.6.5",
