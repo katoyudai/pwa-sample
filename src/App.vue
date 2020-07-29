@@ -18,14 +18,13 @@ export default {
   },
   methods: {
     startReceiving() {
-      console.log('forRapper')
-      window.webkit.messageHandlers.FCM.postMessage(`START_RECIEVING`);
+      window.webkit.messageHandlers.FcmStartRecieving.postMessage(`START_RECIEVING`);
     },
     topic(topic) {
-      window.webkit.messageHandlers.FCM.postMessage(`${topic}`);
+      window.webkit.messageHandlers.FcmRegisterTopic.postMessage(`${topic}`);
     },
     stopReceiving() {
-      window.webkit.messageHandlers.FCM.postMessage(`STOP_RECIEVING`);
+      window.webkit.messageHandlers.FcmStopReceiving.postMessage(`STOP_RECIEVING`);
     }
   }
 }
