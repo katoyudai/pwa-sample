@@ -23,7 +23,7 @@ export default {
     },
     topic(topic) {
       console.log('FcmRegisterTopic')
-      window.webkit.messageHandlers.FCM.postMessage(`TOPIC: ${topic}`);
+      window.webkit.messageHandlers.FCM.postMessage(`TOPIC:${topic}`);
     },
     stopReceiving() {
       console.log('FcmStopReceiving')
