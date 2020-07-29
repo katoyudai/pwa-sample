@@ -2,9 +2,9 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <div class="start-receiving" @click="startReceiving">START RECIEVING</div>
-    <div class="topic" @click="topic(`TOPIC`)">TOPIC</div>
-    <div class="stop-receiving" @click="stopReceiving">STOP RECIEVING</div>
+    <div class="start-receiving" @click="startReceiving">START_RECIEVING</div>
+    <div class="topic" @click="topic(`sampleTopic`)">TOPIC</div>
+    <div class="stop-receiving" @click="stopReceiving">STOP_RECIEVING</div>
   </div>
 </template>
 
@@ -19,15 +19,15 @@ export default {
   methods: {
     startReceiving() {
       console.log('FcmStartRecieving')
-      window.webkit.messageHandlers.FcmStartRecieving.postMessage(`START_RECIEVING`);
+      window.webkit.messageHandlers.FCM.postMessage(`START_RECIEVING`);
     },
     topic(topic) {
       console.log('FcmRegisterTopic')
-      window.webkit.messageHandlers.FcmRegisterTopic.postMessage(`${topic}`);
+      window.webkit.messageHandlers.FCM.postMessage(`TOPIC: ${topic}`);
     },
     stopReceiving() {
       console.log('FcmStopReceiving')
-      window.webkit.messageHandlers.FcmStopReceiving.postMessage(`STOP_RECIEVING`);
+      window.webkit.messageHandlers.FCM.postMessage(`STOP_RECIEVING`);
     }
   }
 }
