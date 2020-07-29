@@ -22,7 +22,7 @@ export default {
       window.webkit.messageHandlers.FCM.postMessage(`START_RECIEVING`);
     },
     topic(topic) {
-      window.webkit.messageHandlers.FCM.postMessage(`TOPIC: ${topic}`);
+      window.webkit.messageHandlers.FCM.postMessage(`${topic}`);
     },
     stopReceiving() {
       window.webkit.messageHandlers.FCM.postMessage(`STOP_RECIEVING`);
